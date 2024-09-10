@@ -36,7 +36,7 @@
 <body>
   <!-- content -->
   <div class="container">
-    <h1 class="greeting animate__animated animate__heartBeat">Happy Birthday!</h1><hr />
+    <h1 class="greeting animate__animated">Happy Birthday!</h1><hr />
     <form role="form">
       <div class="row">
         <div class="col">
@@ -63,6 +63,10 @@
                 <input type="checkbox" class="form-check-input" id="blue">
                 <label class="form-check-label" for="blue">Blue balloons</label>
               </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="toggler" data-toggler="enable">
+                <label class="form-check-label" for="toggler" id="toggler-text">Enable all</label>
+              </div>
             </div>
           </div>
           <button type="button" class="btn btn-outline-primary mt-3" id="submit">Submit</button>
@@ -74,6 +78,16 @@
         </div>
       </div>
     </form>
+  </div>
+  <!-- toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">No Balloons!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">Are you sure you don't want any balloons?</div>
+    </div>
   </div>
 </body>
 </html>
